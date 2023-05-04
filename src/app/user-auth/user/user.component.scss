@@ -1,0 +1,198 @@
+
+@use '../../shared/style/shared-variables'as*;
+
+.signForm{
+ 
+    min-height: 60vh;
+    margin: 3% 0px !important;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    align-items: center;
+
+
+
+
+    .form{
+      
+        width: 380px;
+        height: 480px;
+        overflow: hidden;
+        background-color: var(--color-bg) !important;
+        color: var(--color-font);
+        border-radius: 20px ;
+      	box-shadow: 10px 13px #f68b1e;
+        border: 0.3px solid var(--color-bg2) ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        form{
+            width: 320px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            // padding-right: 4%;
+            padding-left: 4%;
+     
+           }
+             
+
+        .title{
+            padding: 20px 40px;
+            position: relative;
+            font-size: x-large;
+            text-align: center;
+            width: 60%;  
+            
+                
+            
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 50px;
+                width: 70px;
+                border-width: 5px 0px 0px 5px;
+                border-color: $primary-color ;
+                border-style: solid;
+                animation:  3s  a  infinite;
+                animation-direction: alternate-reverse;
+                animation-timing-function: 1s;
+                @keyframes a {
+                    from{ border-color: $primary-color ; transition: all 0.3s ease-in-out;}
+                    to{ border-color:black ; transition: all 0.3s ease-in-out;}
+                      
+                     }
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                height: 50px;
+                width: 70px;
+                border-width: 0px 5px 5px 0px;
+                border-color: black ;
+                border-style: solid;
+                animation:  3s  b infinite;
+                animation-direction: alternate-reverse;
+                animation-timing-function: 1s;
+                @keyframes b {
+                    from{ 
+                           border-color: black  ;
+                           transition: all .3s ease-in-out  }
+                    
+                    to{  
+                       border-color:  $primary-color ;
+                        transition: all .3s ease-in-out }
+                     
+            }
+
+    
+        }
+    }
+        input{
+            border: none;
+            border-bottom: 1px solid gray;
+            margin-top: 20px;
+            transition: all .15s ease-in-out,box-shadow .15s ease-in-out;
+            background-color: var(--color-bg2);
+            color: var(--color-font) !important;
+            
+            &:active,
+            &:focus,
+            &:hover,
+            &:visited {
+            border-color: var(--color-bg)!important;
+            outline: none !important;    
+            box-shadow: 0 0 0 0.1rem $primary-color;
+            background-color:var(--color-bg2)!important
+            }
+            input:focus{
+                 border: 0%;
+            }
+            .login__icon {
+                
+                top: 30px;
+                color: $primary-color;
+                
+            }
+
+           
+        
+    } 
+    
+.login__submit {
+	background: var(--color-bg);
+	font-size: 14px;
+	margin-top: 30px;
+	padding: 16px 20px;
+	border-radius: 26px;
+	border: 1px solid var(--color-bg);
+	text-transform: uppercase;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	color: var(--color-font);
+	box-shadow: 0px 2px 2px $primary-color;
+	cursor: pointer;
+	transition: .2s;
+}
+
+.login__submit:active,
+.login__submit:focus,
+.login__submit:hover {
+	border-color:$primary-color;
+	outline: none;
+}
+
+.button__icon {
+	font-size: 24px;
+	margin-left: auto;
+	color:$primary-color;
+}
+
+.btn-text{
+ 
+    font-size: 14px;
+}
+.btn-switch{
+    color: var(--color-font);
+    font-weight: bold;
+
+    .btn-switch:active,
+    .btn-switch:focus,
+    .btn-switch:hover {
+	
+	border: none;
+}
+}
+
+}
+
+  
+}
+
+
+@media (max-width:500px) {
+    form{
+        width: 250px;
+        height: 380px;
+        padding: 10px;
+    }
+    .form{
+        width: 290px !important;
+    }
+
+    input, .login__submit{
+        width: 80% !important;
+    }
+    .title ,.tt{
+        width: 70% !important;
+        margin-right: 50% !important;
+    }
+}

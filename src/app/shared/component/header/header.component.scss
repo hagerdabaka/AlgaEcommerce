@@ -1,0 +1,220 @@
+@use "../../../shared/style/shared-variables" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Passion+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
+%links {
+    text-decoration: none;
+    color: rgb(235, 235, 235);
+}
+
+nav {
+    background: #24292f !important;
+    color: rgba(196, 192, 192, 0.856) !important;
+    padding: 0 8%;
+
+    .nav-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 0px;
+        .nav-items {
+            float: right;
+            justify-content: end;
+            text-align: end;
+            align-self: flex-end;
+        }
+    }
+    ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        li {
+            padding: 0 10px;
+
+            &:hover {
+                transition: all 0.4s ease;
+                scale: 110%;
+            }
+            a {
+                @extend %links;
+            }
+            a:hover,
+            button:hover,
+            li:hover {
+                background: -webkit-linear-gradient(#fff, #f68b1e);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            list-style-type: none;
+            display: inline;
+        }
+    }
+}
+.logo {
+    //font-family: 'Berkshire Swash', cursive;
+
+    font-family: "Righteous", cursive;
+
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    // background: -webkit-linear-gradient(left,#fff,#ffb468, #f68b1e);
+    // background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    letter-spacing: 0.13em;
+}
+#sign {
+    border-left: 1px solid $secound-color;
+}
+
+@media (max-width: 900px) {
+    .offerclass {
+        margin-top: 10% !important;
+        .offer {
+            font-size: 20px !important;
+            font-weight: bold !important;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .offerclass {
+        margin-top: 14% !important;
+        width: 100%;
+        .offer {
+            font-size: 17px !important;
+            font-weight: bold !important;
+        }
+    }
+}
+
+@media (max-width: 490px) {
+    .offerclass {
+        margin-top: 18% !important;
+        width: 100%;
+        padding: 0%;
+        margin: 0%;
+    }
+}
+
+@media (max-width: 400px) {
+    .offerclass {
+        margin-top: 24% !important;
+        width: 100%;
+        .offer {
+            font-size: 14px !important;
+            font-weight: bold !important;
+        }
+    }
+}
+
+.offerclass {
+    margin-top: 3.5%;
+    padding-top: 0.5%;
+    box-shadow: rgba(243, 129, 21, 0.774) 1.95px 1.95px 2.6px 2px;
+    .offer {
+        font-size: 20px;
+        font-weight: bolder;
+
+        .span2 {
+            color: rgb(206, 4, 4);
+            animation: a 1s infinite !important;
+        }
+        @keyframes a {
+            80% {
+                transition: all 0.2s ease;
+                scale: 100%;
+            }
+            20% {
+                transition: all 0.2s ease;
+                color: white;
+            }
+        }
+    }
+}
+li button {
+    color: white !important;
+}
+
+@media (max-width: 780px) {
+    ul,
+    li,
+    .mode {
+        font-size: 14px !important;
+        padding: 0 5px !important;
+    }
+    ul img {
+        width: 50% !important;
+    }
+    .logo {
+        font-size: 30px;
+    }
+}
+
+//  medaia
+
+@media (min-width: 800px) {
+    #nav1 {
+        display: block;
+    }
+
+    li {
+        justify-content: space-between;
+        font-size: large;
+        align-items: center;
+        text-align: center;
+    }
+
+    #nav2 {
+        display: none;
+    }
+}
+@media (max-width: 800px) {
+    #nav1 {
+        display: none;
+    }
+
+    #nav2 {
+        display: block;
+    }
+    i {
+        font-size: 150%;
+    }
+}
+@media (max-width: 800px) {
+    i {
+        font-size: 110%;
+    }
+}
+
+.light {
+    width: 40px;
+    height: 40px;
+    background-image: url(https://assets.codepen.io/1462889/sun.svg);
+    // background-color: #8ec0c7;
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 200ms linear;
+    border-radius: 50%;
+    display: block;
+    transform: rotate(360deg);
+    border: none;
+    position: relative;
+}
+.dark {
+    width: 40px;
+    height: 40px;
+    // background-color: #102770;
+    background-image: url(https://assets.codepen.io/1462889/moon.svg);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 200ms linear;
+    border-radius: 50%;
+    display: block;
+    transform: rotate(360deg);
+    border: none;
+    position: relative;
+}

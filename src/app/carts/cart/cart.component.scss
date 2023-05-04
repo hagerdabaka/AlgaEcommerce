@@ -1,0 +1,129 @@
+@use '../../../app/shared/style/shared-variables' as* ;
+
+*{
+  
+  color: var(--color-font);
+  text-align: center;
+}
+
+.card{
+    border-radius: 10px;
+    border-color: var(--color-bg);
+    filter: drop-shadow(0 10px 5px rgba(0,0,0,0.125));
+    transition: all .3s ease; 
+    background-color: var(--color-bg2);
+    text-align: center;
+ 
+
+}
+
+
+.card-table {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: none;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: .25rem;
+}
+
+// .btn {
+//     border: none;
+//     padding: 12px 24px;
+//     border-radius: 24px;
+//     font-size: 12px;
+//     font-size: 0.8rem;  
+//     letter-spacing: 2px;  
+//     cursor: pointer;
+//     margin: 5px 5px;
+//     background: $primary-color;
+//     color: rgba(255,255,255,0.95);
+//     filter: drop-shadow(0);
+//     font-weight: bold;
+//     transition: all .3s ease;
+//     width: auto;
+
+
+//   }
+
+.btn {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-size: 0.8rem;  
+  letter-spacing: 2px;  
+  cursor: pointer;
+  margin: 5px 5px;
+}
+
+  .btn + .btn {
+    margin-left: 10px;
+  }
+  
+
+  .fill {
+    background: $primary-color;
+    color: rgba(255,255,255,0.95);
+    filter: drop-shadow(0);
+    font-weight: bold;
+    transition: all .3s ease; 
+  }
+  
+  .fill:hover{
+    transform: scale(1.125);  
+    border-color: rgba(255, 255, 255, 0.9);
+    filter: drop-shadow(0 10px 5px rgba(0,0,0,0.125));
+    transition: all .3s ease;    
+  }
+  // .btn2{
+  //   border-radius: 10px;
+  //   width: auto;
+  //   padding:8px 10px;
+  //   background-color: var(--color-bg2);
+  //   color: var(--color-font);
+  //   border: 1px solid $primary-color;
+  // }
+
+  .order{
+    background-color: green !important;
+  }
+
+  i{
+    color: rgb(153, 5, 5);
+    font-size: 120%;
+  }
+
+  // .btn:hover{
+  //   transform: scale(1.125);  
+  //   border-color: rgba(255, 255, 255, 0.9);
+  //   filter: drop-shadow(0 10px 5px rgba(0,0,0,0.125));
+  //   transition: all .3s ease;    
+  // }
+
+  .btnn-group{
+   text-align: center;
+  }
+
+  @media (max-width:500px) {
+    table{
+     
+      font-size: 75%;
+
+      img{
+        width: 100% !important;
+
+      }
+      .desc{
+        display: none;
+      }
+
+      .btn{
+        padding: 5px 10px;
+        border-radius: 12px;
+        font-size: 0.4rem;
+      }
+    }
+  }

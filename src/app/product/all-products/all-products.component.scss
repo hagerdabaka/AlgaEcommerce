@@ -1,0 +1,219 @@
+ @use '../../../app/shared/style/shared-variables' as*;
+
+
+
+ // Banner 1
+
+ .banimg1{
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://cdn.shopify.com/s/files/1/0102/4383/3952/files/slider1.jpg?v=1613716607");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+ }
+ 
+// BANNER VIDEO SLIDER AND CATEGORY LIST 
+
+@media (max-width:600) {
+    *{
+        width: 100%;
+        padding: 0%;
+        margin: 0%;
+    }
+}
+
+.banner-cat{
+    margin: 10px 5% ;
+    background-color: var(--color-bg);
+    align-items: center;
+   
+    position: relative;
+
+    video{
+        width: 100%;
+        height: 90% !important;
+       }
+    .carousel-item img {
+        height: 80vh !important;
+        width: auto;
+    }
+    @media (max-width:800px) {
+        .carousel-item img {
+            height:auto !important;
+           
+        }   
+    }
+
+}
+@media (max-width:800px) {
+    .banner-cat{
+    margin: 0px 0px;  
+    width: 100%;
+    padding: 0% 0%;
+}
+video{
+    margin: 0px 0px;  
+    width: 100%;
+    padding: 0% 0%;
+   }
+}
+
+
+//  CATEGORY CARDS 
+
+
+#cateogry-card{
+
+    width: 240px !important;
+    transition: $transition;    
+    filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
+    direction: ltr;
+    color: var(--color-font);
+     
+   &:hover{
+    transition: all .5s ease;
+    scale: 101%;
+    border-right:  10px solid $primary-color;
+    border-bottom:  10px solid $primary-color;
+
+    border-radius: 10% !important;
+    margin-bottom: 15px;
+    margin-top: 15px;
+   }
+
+    img{
+        max-width: 190px;
+    }
+    .saleicon{
+        width: auto;
+        float: right;
+        background-color: brown;
+        color: white;
+        padding: 10px 5px;
+        border-radius: 70%;
+        font-size: 50%;
+       }
+       
+}
+
+@media (min-width:900px) {
+    #cateogry-card{
+        width: 250px !important;
+
+        .imgs{
+           max-width: 220px !important;
+        }
+    }
+
+}
+@media (max-width:600px) {
+    #cateogry-card{
+        margin: 2% 2%;
+    }
+}
+ // CARD CSS
+ .card{
+    width: 120px !important;   
+    border: none;
+    line-height: 1.2;
+    overflow: hidden;
+
+
+ }
+ .imgs{
+    
+    border-radius: 4px;
+    height: 170px;
+ }
+
+a{
+    text-decoration: none;
+    font-style: none;
+    color: var(--color-font);
+}
+
+
+// features 
+.feature{
+    text-align: center;
+    
+
+    .imgf img {
+        width: 75px; 
+        height: 75px;
+    }
+    .icon-title{
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--color-font);
+        margin-top: 33px;
+
+    }
+    .icon-text{
+        font-size: 14px;
+        color: var(--color-font2);
+    }
+}
+
+
+// ******** BEST SELLER OWL CARUOSEL *****************8
+
+
+
+#sell-line{
+ line-height: 1rem;
+}
+@media (max-width:600px) {
+    .best-sellers,title {
+    margin: 20px 0% ;
+}
+}
+
+.best-sellers{
+ background-color: var(--color-bg2);
+ margin: 20px 8% ;
+ padding-bottom: 2%;
+
+    img {
+        width: 150px;
+        height: 150px;
+        image-rendering: auto;
+     }
+
+ .title{
+    background-color: $primary-color;
+    color: #FFFFFF;
+    
+ }
+
+#card-sell{
+    width: 180px !important;
+    box-shadow: 1px $primary-color inset;
+    filter: drop-shadow(0 10px 5px rgba(0,0,0,0.125));
+    direction: ltr;
+    background-color: #FFFFFF;
+}
+#card-sell:hover{
+ 
+    transition: all .5s ease;
+    scale: 110%;
+    border-bottom: 15px solid $primary-color;
+    border-bottom-right-radius:50% !important ;
+}
+}
+
+
+section{
+    margin: 7% 8% ;
+    background-color: var(--color-bg);
+    color:var(--color-font) !important;
+    align-items: center;
+}
+
+.card-body ,.card-text{ 
+
+    color: var(--color-font);
+    background-color: var(--color-bg2);
+}

@@ -1,0 +1,56 @@
+
+<section class="signForm">
+    <div class="row form">
+        <div class="col-xs-12">
+            <div class="img-color c1" ></div>
+         <!-- <div class="alert alert-danger"*ngIf="error">
+            <app-alert></app-alert>
+                <P>{{error}}</P>
+            </div>  -->
+             <div *ngIf="error"  [swal]="['error' , 'Your Email or Password is Wrong . please, try again' ,'warning'] " ></div>
+            <div *ngIf="isLoading" style="text-align: center;">
+                <app-spinner></app-spinner>
+            </div>
+            <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading" >
+                <div class=" tt " >
+                    <div class="title m-5">{{ isLoadingMode ? 'LOGIN' :'SIGNUP'}}</div>
+                </div>
+                <div class="form-group">
+                 <input type="email"
+                  id="email" 
+                 class="form-control"
+                 ngModel
+                 required
+                 name="email"
+                 email
+                 placeholder="Email"
+                >
+                </div>
+                <div class="form-group mb-2 position-relative">
+       
+
+                    <input type="password"
+                     id="password"
+                     class="form-control"
+                     ngModel
+                     required
+                     name="password"
+                     minlength="6"
+                     placeholder="Password"
+                    >
+                   </div>
+                   <div>
+                   
+                    <button class="button login__submit me-3" type="submit" [disabled]="!authForm.valid" >
+                     <span> {{isLoadingMode ? 'Login' : 'Sign Up'}} </span>					
+                        <i class="button__icon fas fa-chevron-right"></i>  </button>  
+                        <br>
+                        <span *ngIf="isLoadingMode" class="btn-text"> Don't have any aacount ?</span>
+                        <span *ngIf="!isLoadingMode">I already have account </span>
+                     <button    class=" btn btn-switch "(click)="onSwitchMode()" type="button"  > {{ isLoadingMode ? 'Sign Up' :'Login'}}</button>
+                   </div>
+            </form>
+            <div class="img-color c2"></div>
+        </div>
+    </div>
+</section>

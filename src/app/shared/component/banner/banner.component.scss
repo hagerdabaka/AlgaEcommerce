@@ -1,0 +1,31 @@
+
+
+.banner{
+    margin: 3% 0;
+    .banner-1 {
+        margin-top: 1%;
+        margin-bottom: 3%;
+        .img-b1{
+         width: 130% ;
+         margin-bottom: 1% ;
+
+         &:hover{
+            scale: 103%;
+            transition: all 1s ease-in-out;
+         }
+        }
+    }
+}
+.title{
+    text-align: center;
+    padding-top: 5px;
+    justify-content: center;
+    background-color: #E1BEE7;
+    font-size: 1.25rem;
+    color: #282828;
+    min-height: 48px;
+    margin-bottom: 5px;
+
+}
+
+

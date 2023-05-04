@@ -1,0 +1,9 @@
+
+@use '../../../algaShop/src/app/shared/style/shared-variables' as*;
+
+*{
+    background-color: var(--color-bg) !important;
+    color:var(--color-font) !important;
+    height: auto !important;
+ }
+

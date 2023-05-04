@@ -1,0 +1,12 @@
+<!-- <div class="backdrop" (click)="onClose()"></div>
+    <div class="alert-box">
+        <p>{{message}}</p>
+        <div class="alert-box-axtions">
+            <button class="btn btn-danger" (click)="onClose()">
+                close
+            </button>
+        </div>
+    </div> -->
+
+
+    <div [swal]="['error' , '{{message}}' ,'warning'] "></div>
