@@ -1,0 +1,81 @@
+<nav class="fixed-top w-100  position-relative d-flex justify-content-center">
+  <div class="container">
+    <div class="nav-header">
+      <div class="nav-logo" routerLink="products">
+        <div class="logo"> Alga<span style="color:#f68b1e; font-size: larger;">.</span></div>
+      </div>
+
+      <div class="nav-item" id="nav1">
+        <ul>
+          <li><a routerLink="products"> Home</a></li>
+          <li id="cartIcon">
+            <a routerLink="/cart">
+              <i class=""> <i class="fa-solid fa-bag-shopping"></i> </i>
+              <div style="font-size: 15px; font-weight: bold" class="badge text-danger">
+                {{ totalItem }}
+              </div>
+            </a>
+          </li>
+          <li class="nav-item" routerLinkActive="active" *ngIf="!isAuthenticated">
+            <a class="nav-link" style="cursor: pointer" routerLink="/user">
+              Login <i class="bi bi-person"></i></a>
+          </li>
+          <li class="nav-item navbar-right" routerLinkActive="active" *ngIf="isAuthenticated">
+            <a class="nav-link" style="cursor: pointer" routerLink="" (click)="onLogout()">LogOut <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+          </li>
+          <li class="mt-2">
+            <a (click)="modeToggle()" *ngIf="isDark">
+              <div class="light"></div>
+            </a>
+            <a (click)="modeToggle()" *ngIf="!isDark">
+              <div class="dark"></div>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav-item" id="nav2">
+        <ul>
+          <li id="cartIcon">
+            <a routerLink="/cart">
+              <i class="fa-solid fa-bag-shopping"></i>
+            </a>
+          </li>
+          <li id="cartIcon">
+            <a routerLink="/cart">
+              <div style="font-size: 15px; font-weight: bold" class="badge text-danger">
+                {{ totalItem }}
+              </div>
+            </a>
+          </li>
+          <li class="nav-item" routerLinkActive="active" *ngIf="!isAuthenticated">
+            <a class="nav-link" style="cursor: pointer" routerLink="/user">
+              <i class="fa-solid fa-user"></i> </a>
+          </li>
+          <li class="nav-item navbar-right" routerLinkActive="active" *ngIf="isAuthenticated">
+            <a class="nav-link" style="cursor: pointer" routerLink="" (click)="onLogout()">
+              <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </a>
+          </li>
+
+          <li class="mt-2">
+            <a (click)="modeToggle()" *ngIf="isDark">
+              <div class="light"></div>
+            </a>
+            <a (click)="modeToggle()" *ngIf="!isDark">
+              <div class="dark"></div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- <div class="container offerclass">
+  <div class="text-center d-flex align-items-center justify-content-center">
+    <p class="offer m-0">
+      FREE STANDARED SHIPPING ON ORDERS OF <span class="span2"> $29+</span>
+    </p>
+  </div>
+</div> -->

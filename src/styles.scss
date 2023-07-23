@@ -1,0 +1,19 @@
+:root{
+    --color-bg:white;
+    --color-font:rgb(29, 29, 29);
+    --color-font2:rgb(104, 104, 104);
+    --color-bg2:white;
+}
+
+[data-theme="dark"]{
+    --color-bg:rgb(29, 29, 29);
+    --color-font: rgb(231, 231, 231);
+    --color-font2:rgb(185, 185, 185);
+    --color-bg2:#323232;
+
+}
+
+// body{
+//     width: 100%;
+//     overflow: hidden;
+// }

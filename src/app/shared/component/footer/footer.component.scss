@@ -1,0 +1,60 @@
+@use '../../../shared/style/shared-variables' as *;
+
+
+$footer-color:rgba(238, 238, 238, 0.856);
+.footer{
+    font-family: Arial,Helvetica,sans-serif!important;
+    font-size: 12px;
+    background:#24292f!important;
+    color:$footer-color !important;
+    padding-top: 6%;
+    padding-bottom: 4%;
+    width: 100%;
+    line-height: 2em;
+
+}
+.privacy-list ul li{
+     display: inline-block;
+     border-right: 1px solid $footer-color;
+     padding: 0.5px 5px;
+     margin-top: 2px;
+     text-decoration: underline;
+     cursor: pointer;
+
+}
+.list-icon ul li{
+ display: inline;
+ font-size: 30px;
+ color:#eeeeee;
+ padding: 5px 5px;
+ cursor: pointer;
+
+}
+.list-icon ul li:hover,ul li:hover{
+ 
+    color:rgba(243, 129, 21, 0.774);
+    transition:  all 0.3s  ease-out;
+}
+
+
+.align{
+    justify-content: center;
+}
+ 
+.headers{
+    color: rgba(255, 255, 255, 0.856);
+    font-size: 15px;
+    font-weight: 500;
+    list-style: none;
+}
+ input{
+ padding: 0.5rem 2rem;
+ border-color: $footer-color;
+ margin-left: 1.5rem;
+ margin-top:3%;
+}
+.btn{
+    border-radius: 0px !important;
+    padding-top: 0.3rem;
+  
+}
